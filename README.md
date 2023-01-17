@@ -99,6 +99,12 @@ Permission: 初期値
 http://localhost/admin/users
 ```
 
+## 12. mailhog
+
+```bash
+http://localhost:8025
+```
+
 # エラー対処法
 
 ### Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:80 -> 0.0.0.0:0: listen tcp 0.0.0.0:80: bind: address already in use
