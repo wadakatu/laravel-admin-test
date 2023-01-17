@@ -89,11 +89,15 @@ class UserController extends AdminController
 
     public function sendMail(Content $content)
     {
-        $forms = [
-            'All' => SendMailToAll::class,
-            'Individual' => SendMailToIndividual::class,
-        ];
+        //タブなし
+        return $content->title('Write mail')->body(new SendMailToAll());
 
-        return $content->title('Write mail')->body(Tab::forms($forms));
+//        // タブあり
+//        $forms = [
+//            'All' => SendMailToAll::class,
+//            'Individual' => SendMailToIndividual::class,
+//        ];
+//
+//        return $content->title('Write mail')->body(Tab::forms($forms));
     }
 }

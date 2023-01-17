@@ -52,11 +52,14 @@ composer install
 ./vendor/bin/sail php artisan key:generate
 ```
 
-## 7. php artisan migrate
+## 7. php artisan admin:install
 
 ```bash
-./vendor/bin/sail php artisan migrate
+./vendor/bin/sail php artisan admin:install
 ```
+
+※ 最後、赤文字で出るメッセージは気にしなくて大丈夫です。
+/var/www/html/app/Admin directory already exists !
 
 ## 8. php artisan db:seed
 
@@ -70,9 +73,31 @@ composer install
 http://localhost/admin
 
 ID: admin
-PW: password
+PW: admin
 ```
 
+## 10. 一般ユーザー用サイドメニュー作成
+
+```bash
+1. メニュー作成画面にアクセス
+http://localhost/admin/auth/menu
+
+2. 下記の値を入力
+Parent: ROOT
+Title: 任意の値
+Icon: 初期値
+URI: users
+Roles: 初期値
+Permission: 初期値
+
+3. Submitボタンを押して登録
+```
+
+## 11. ユーザー一覧画面遷移
+
+```bash
+http://localhost/admin/users
+```
 
 # エラー対処法
 
