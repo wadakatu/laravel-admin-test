@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\AdminUser;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,6 +15,5 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::factory(5)->create();
-        AdminUser::factory()->create(['username' => 'admin', 'name' => 'admin']);
     }
 }
